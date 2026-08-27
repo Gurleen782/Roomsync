@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
+import Link from "next/link";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -70,7 +71,7 @@ export default function LoginPage() {
         </form>
 
         <p className="text-center mt-6 text-gray-500">
-          Don't have an account? <span className="text-blue-600 cursor-pointer">Sign Up</span>
+          Don't have an account? <Link href="/signup" className="text-blue-600 hover:underline"> Sign Up </Link>
         </p>
       </div>
     </main>

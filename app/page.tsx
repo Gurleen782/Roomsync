@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-100 flex items-center justify-center">
@@ -11,9 +13,12 @@ export default function Home() {
           your roommates.
         </p>
 
-        <button className="mt-8 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        <Link
+          href="/login"
+          className="inline-block mt-8 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+        >
           Get Started
-        </button>
+        </Link>
       </div>
     </main>
   );
